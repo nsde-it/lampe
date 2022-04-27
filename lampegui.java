@@ -7,7 +7,7 @@
 import basis.*;
 
 public class LampeGUI
-{
+{   
     // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
     private Fenster fenster;
     private Knopf kEnde;
@@ -22,9 +22,10 @@ public class LampeGUI
     private Lampe lampe1;
     private Lampe lampe2;
    
-    public  LampeGui()
+    public LampeGUI()
     {
       fenster =new Fenster(600,600);
+      
       kEnde =new Knopf("Ende",460,400,80,20);
       kZeige =new Knopf("Zeige",60,400,80,20);
       kAn = new Knopf("AN", 150,400,60,20);
@@ -73,7 +74,7 @@ public class LampeGUI
                 lampe2.schalteAus();
             }
             
-            if (partyModus.wurdeGewaehlt()) {
+            if (partyModus.wurdeGeaendert()) {
                 lampe1.partyModusWechseln();
                 lampe2.partyModusWechseln();
             }
@@ -96,4 +97,4 @@ public class LampeGUI
            
         }
     }
-//}
+}
